@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201391532fcfb024abdb13d460ea0ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainGameLevel: RasmusUpgradedScene
+  _mainGameLevel: PersScene
   _messageOnStart: StartMenuMusic
 --- !u!4 &90107810
 Transform:

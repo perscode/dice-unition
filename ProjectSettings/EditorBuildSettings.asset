@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: f9cf06329655ef64a8e0c588e5ca0ed8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/RasmusUpgradedScene.unity
     guid: 5339d3d20e25b014095d4fc093bfbdae
+  - enabled: 1
+    path: Assets/Scenes/PersScene.unity
+    guid: ad743402c2a8c4d478778ddba9b7bb8d
   m_configObjects: {}

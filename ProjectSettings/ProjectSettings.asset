@@ -564,6 +564,7 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
     1: OOTII_MD
+    13: OOTII_MD
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
