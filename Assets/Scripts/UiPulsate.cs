@@ -22,12 +22,16 @@ public class UiPulsate : MonoBehaviour
     
     void OnEnable()
     {
-        _button.Focus();
-        _tween = transform.DOScale(transform.localScale * SizeFactor, Time).SetEase(Ease).SetLoops(-1, LoopType.Yoyo);
+        _button.Select();
+        Debug.Log($"Started pulsation for {name}");
+        _tween = transform.DOScale(transform.localScale * SizeFactor, Time).SetEase(Ease).SetLoops(-1, LoopType.Yoyo).SetUpdate(true);
     }
 
     void OnDisable()
     {
-        _tween.Kill();
+        if (_tween != null)
+        { 
+            _tween.Kill();
+        }
     }
 }

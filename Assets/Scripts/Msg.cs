@@ -1,9 +1,11 @@
 public static class Msg
 {
-    public static readonly string 
+    public static readonly string
         PlayerWon = "PlayerWon",
         PlayerLost = "PlayerLost",
         LevelUp = "LevelUp",
-        RestartLevel = "RestartLevel";
+        RestartLevel = "RestartLevel",
+        LevelStarted = "LevelStarted",
+        StartMenuMusic = "StartMenuMusic";
 }
 

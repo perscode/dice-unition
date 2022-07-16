@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201391532fcfb024abdb13d460ea0ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mainGameLevel: 
 --- !u!1001 &5198312545297685690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230,7 +231,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4921494807102317978, guid: 25b9de1c6bc780b4786cfafcf83d1c93, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022777266891964168, guid: 25b9de1c6bc780b4786cfafcf83d1c93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022777266891964168, guid: 25b9de1c6bc780b4786cfafcf83d1c93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022777266891964168, guid: 25b9de1c6bc780b4786cfafcf83d1c93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022777266891964168, guid: 25b9de1c6bc780b4786cfafcf83d1c93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartGameLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022777266891964168, guid: 25b9de1c6bc780b4786cfafcf83d1c93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022777266891964168, guid: 25b9de1c6bc780b4786cfafcf83d1c93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25b9de1c6bc780b4786cfafcf83d1c93, type: 3}

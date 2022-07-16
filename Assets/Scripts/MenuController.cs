@@ -56,6 +56,8 @@ public class MenuController : MonoBehaviour
 
     private void ActivateSubMenu(string key)
     {
+        MessageDispatcher.SendMessage(Msg.StartMenuMusic);
+
         if (_pauseManager != null)
         {
             _pauseManager.Pause();
@@ -81,6 +83,8 @@ public class MenuController : MonoBehaviour
             _pauseManager.Resume();
         }
 
+        MessageDispatcher.SendMessage(Msg.LevelStarted);
+
         DeactivateAll();
     }
 
@@ -91,5 +95,6 @@ public class MenuController : MonoBehaviour
             item.Value.Deactivate(true);
         }
     }
+
 }
 
