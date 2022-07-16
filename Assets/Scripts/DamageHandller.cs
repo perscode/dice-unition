@@ -12,6 +12,7 @@ public class DamageHandller : MonoBehaviour
     private Rigidbody2D playerRigidBody;
     public string vulnerableTo;
     SpriteRenderer spriteRenderer;
+    public GameObject explosionPrefab;
 
     int correctLayer;
 
@@ -44,6 +45,9 @@ public class DamageHandller : MonoBehaviour
             updateLayers(10);
             if (health <= 0 && !isÍmmortal)
             {
+                if (explosionPrefab != null) { 
+                    Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+                }
                 Die();
             }
         }
