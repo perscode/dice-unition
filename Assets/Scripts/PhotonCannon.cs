@@ -17,7 +17,6 @@ public class PhotonCannon : MonoBehaviour
     {
         speed *= photonSpeed;
         GameObject shot = Instantiate(photonProjectile, transform.position, Quaternion.identity);
-        shot.vuul
         ShotMovement shotMovement = shot.GetComponent<ShotMovement>();
         shotMovement.bulletVelocity = new Vector2(speed + playerMovement.Velocity.x, 0);
     }
