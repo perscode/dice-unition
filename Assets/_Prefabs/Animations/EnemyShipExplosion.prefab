@@ -14430,6 +14430,7 @@ GameObject:
   - component: {fileID: 548942944873150055}
   - component: {fileID: 373630236295401559}
   - component: {fileID: 383637451198288945}
+  - component: {fileID: 6035116930945420022}
   m_Layer: 0
   m_Name: EnemyShipExplosion
   m_TagString: Untagged
@@ -14671,8 +14672,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 1
+      scalar: 1
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -19135,6 +19136,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &6035116930945420022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545926007998155037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17bb056b9250af949b00fa1bdcfa5495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &544945787662404715
 PrefabInstance:
   m_ObjectHideFlags: 0
