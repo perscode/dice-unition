@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 1675643842}
   - component: {fileID: 1675643845}
   - component: {fileID: 1675643844}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +677,7 @@ GameObject:
   - component: {fileID: 1687121600}
   - component: {fileID: 1687121601}
   - component: {fileID: 1687121602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerShip
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -747,7 +747,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 5
-  "is\xCDmmortal": 1
+  "is\xCDmmortal": 0
+  invulnPeriod: 0.5
   thrust: 25
 --- !u!114 &1687121602
 MonoBehaviour:
@@ -763,7 +764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 1687121598}
   photonProjectile: {fileID: 5250708891008281195, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-  photonSpeed: 2
+  photonSpeed: 5
 --- !u!1 &1882858024
 GameObject:
   m_ObjectHideFlags: 0
@@ -5661,6 +5662,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5250708891008281192, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
+      propertyPath: bulletVelocity.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250708891008281192, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
+      propertyPath: bulletVelocity.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5250708891008281193, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
       propertyPath: m_RootOrder
       value: 10

@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5250708891008281193}
   - component: {fileID: 5250708891008281192}
+  - component: {fileID: 7707334579295057283}
+  - component: {fileID: 8719303638176345307}
   m_Layer: 0
   m_Name: Shot
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +47,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletVelocity: {x: 1, y: 1}
+--- !u!50 &7707334579295057283
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250708891008281195}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &8719303638176345307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250708891008281195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54c20183c03161488447bd82b0140fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  "is\xCDmmortal": 0
+  invulnPeriod: 0
+  thrust: 0
+  vulnerableTo: Enemy
 --- !u!1 &5250708891507423964
 GameObject:
   m_ObjectHideFlags: 0

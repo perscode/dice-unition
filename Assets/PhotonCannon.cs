@@ -30,10 +30,8 @@ public class PhotonCannon : MonoBehaviour
         {
             yield return longInterval;
             fire(-1);
-            Debug.Log("Shoot");
             yield return shortInterval;
             fire(1);
-            Debug.Log("Shoooooooooot");
         }
     }
 }

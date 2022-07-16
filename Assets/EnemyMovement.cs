@@ -10,7 +10,8 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (target == null) { 
+        if (target == null)
+        {
             target = GameObject.FindGameObjectWithTag("Player").transform;
         }
     }
@@ -18,9 +19,15 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (target != null && transform != null) { 
+        if (target != null && transform != null)
+        {
             var step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collision!");
     }
 }
