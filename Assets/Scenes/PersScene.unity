@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a3bd2777c12fb744b8534c802f74919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 2.2
+  maxSpeed: 2
   Velocity: {x: 0, y: 0, z: 0}
 --- !u!4 &1687121599
 Transform:
@@ -634,9 +634,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   "is\xCDmmortal": 0
-  invulnPeriod: 0.5
+  invulnPeriod: 1
   thrust: 25
-  vulnerableTo: 
+  vulnerableTo: Enemy
 --- !u!114 &1687121602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5521,6 +5521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2073399688}
+  - component: {fileID: 2073399689}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -5542,68 +5543,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5250708891922440662
-PrefabInstance:
+--- !u!114 &2073399689
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5250708891008281192, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: bulletVelocity.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250708891008281192, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: bulletVelocity.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250708891008281193, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250708891008281193, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.014467246
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250708891008281193, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.43115678
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250708891008281193, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.07523739
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250708891008281193, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250708891008281193, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250708891008281193, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250708891008281193, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250708891008281193, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250708891008281193, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250708891008281193, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250708891008281195, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-      propertyPath: m_Name
-      value: Shot
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073399687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42540abae9b5a5f4f812931ce166da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

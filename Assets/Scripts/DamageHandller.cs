@@ -11,6 +11,7 @@ public class DamageHandller : MonoBehaviour
     public float thrust;
     private Rigidbody2D playerRigidBody;
     public string vulnerableTo;
+    SpriteRenderer spriteRenderer;
 
     int correctLayer;
 
@@ -18,6 +19,17 @@ public class DamageHandller : MonoBehaviour
     {
         playerRigidBody = gameObject.GetComponent<Rigidbody2D>();
         correctLayer = gameObject.layer;
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = transform.GetComponentInChildren<SpriteRenderer>();
+            if (spriteRenderer == null)
+            {
+                Debug.LogError("Object '" + gameObject.name + "' has no sprite renderer.");
+            }
+        }
+        StartCoroutine(InvulnerabilityAnimation());
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -41,16 +53,26 @@ public class DamageHandller : MonoBehaviour
         gameObject.layer = layer;
         foreach(Transform child in transform)
         {
-            child.gameObject.layer = layer;
+            if (child.gameObject.layer != 11) { 
+                child.gameObject.layer = layer;
+            }
         }
     }
 
     private void Update()
     {
-        invulnTimer -= Time.deltaTime;
-        if (invulnTimer <= 0)
-        {
-            updateLayers(correctLayer);
+        if (invulnTimer > 0) { 
+            invulnTimer -= Time.deltaTime;
+
+
+            if (invulnTimer <= 0)
+            {
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.enabled = true;
+                }
+                updateLayers(correctLayer);
+            }
         }
     }
     private void Knockback(GameObject enemyObject)
@@ -59,7 +81,6 @@ public class DamageHandller : MonoBehaviour
         Vector2 difference = transform.position - enemyObject.transform.position;
         difference *= thrust;
         playerRigidBody.AddForce(difference, ForceMode2D.Impulse);
-        Debug.Log("Player new position" + playerRigidBody.position);
     }
 
     void Die()
@@ -67,4 +88,18 @@ public class DamageHandller : MonoBehaviour
         Destroy(gameObject);
     }
 
+    IEnumerator InvulnerabilityAnimation()
+    {
+        WaitForSeconds shortInterval = new WaitForSeconds(0.1f);
+
+        while (true)
+        {
+            if (invulnTimer > 0 && spriteRenderer != null)
+            {
+                spriteRenderer.enabled = !spriteRenderer.enabled;
+            }
+            yield return shortInterval;
+            
+        }
+    }
 }
