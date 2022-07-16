@@ -36,11 +36,12 @@ public class DamageHandller : MonoBehaviour
     {
         if (playerRigidBody != null && collision.gameObject.tag == vulnerableTo) {
             invulnTimer = invulnPeriod;
-            updateLayers(10);
             GameObject enemy = collision.gameObject;
             health--;
 
             Knockback(enemy);
+
+            updateLayers(10);
             if (health <= 0 && !isÍmmortal)
             {
                 Die();
@@ -50,11 +51,13 @@ public class DamageHandller : MonoBehaviour
 
     private void updateLayers(int layer)
     {
-        gameObject.layer = layer;
-        foreach(Transform child in transform)
-        {
-            if (child.gameObject.layer != 11) { 
-                child.gameObject.layer = layer;
+        if (vulnerableTo == "Enemy") { 
+            gameObject.layer = layer;
+            foreach(Transform child in transform)
+            {
+                if (child.gameObject.layer != 11) { 
+                    child.gameObject.layer = layer;
+                }
             }
         }
     }
