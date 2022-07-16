@@ -65,6 +65,7 @@ MonoBehaviour:
   invulnPeriod: 0
   thrust: 0
   vulnerableTo: Enemy
+  explosionPrefab: {fileID: 0}
 --- !u!50 &7619224943449700806
 Rigidbody2D:
   serializedVersion: 4
@@ -98,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2433cdfb3d9334987813e9d5a4bceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 1
+  timer: 3
 --- !u!1 &5250708891507423964
 GameObject:
   m_ObjectHideFlags: 0
