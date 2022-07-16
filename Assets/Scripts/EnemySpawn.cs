@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject enemyPrefab;
+
     void Start()
     {
-        
+        // Instantiate(enemyPrefab, transform.position, Quaternion.identity);
     }
 
     // Update is called once per frame
