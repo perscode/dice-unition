@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using com.ootii.Messages;
 
 public class DamageHandller : MonoBehaviour
 {
@@ -93,6 +94,10 @@ public class DamageHandller : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        if (vulnerableTo == "Bullet")
+        {
+            MessageDispatcher.SendMessage(Msg.GainXP);
+        }
     }
 
     IEnumerator InvulnerabilityAnimation()
