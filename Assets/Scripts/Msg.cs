@@ -8,6 +8,7 @@ public static class Msg
         LevelStarted = "LevelStarted",
         StartMenuMusic = "StartMenuMusic",
         PlaySound = "PlaySound",
-        GainXP = "GainXP";
+        GainXP = "GainXP",
+        UpgradeSelected = "UpgradeSelected";
 }
 
