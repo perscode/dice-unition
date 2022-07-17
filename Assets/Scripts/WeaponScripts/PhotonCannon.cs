@@ -1,3 +1,5 @@
+using com.ootii.Messages;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +19,36 @@ public class PhotonCannon : MonoBehaviour
     {
         bulletSpeed = 5f;
         StartCoroutine(KeepShootimg());
+    }
+
+    private void OnEnable()
+    {
+        MessageDispatcher.AddListener("WeaponSpeed", SetWeaponSpeed);
+        MessageDispatcher.AddListener("WeaponDirections", SetWeaponDirections);
+    }
+
+    private void OnDisable()
+    {
+        MessageDispatcher.RemoveListener("WeaponSpeed", SetWeaponSpeed);
+        MessageDispatcher.RemoveListener("WeaponDirections", SetWeaponDirections);
+    }
+
+    private void SetWeaponDirections(IMessage rMessage)
+    {
+        if (rMessage.Data is float)
+        {
+            float value = (float)rMessage.Data;
+            bulletCountModifier = (int)value;
+        }
+    }
+
+    private void SetWeaponSpeed(IMessage rMessage)
+    {
+        if (rMessage.Data is float)
+        {
+            float value = (float)rMessage.Data;
+            weaponSpeedModifier = (int)value;
+        }
     }
 
     private void fire(float directionX, float directionY)

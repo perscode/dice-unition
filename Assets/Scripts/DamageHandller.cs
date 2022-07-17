@@ -100,6 +100,11 @@ public class DamageHandller : MonoBehaviour, IUpgradable
         {
             MessageDispatcher.SendMessage(Msg.GainXP);
         }
+        else if (tag == "Player")
+        {
+            MessageDispatcher.SendMessage(Msg.PlayerLost);
+        }
+
     }
 
     IEnumerator InvulnerabilityAnimation()

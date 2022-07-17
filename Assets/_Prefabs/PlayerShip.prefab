@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4188294932893690735}
   - component: {fileID: 4188294932893690732}
   - component: {fileID: 4188294932893690733}
+  - component: {fileID: 1343081314}
+  - component: {fileID: 1343081315}
   m_Layer: 8
   m_Name: PlayerShip
   m_TagString: Player
@@ -49,6 +51,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 3
   Velocity: {x: 0, y: 0, z: 0}
+  UpgradeFactor: 0.2
+  UpgradeValue: 0
 --- !u!50 &4188294932893690735
 Rigidbody2D:
   serializedVersion: 4
@@ -88,6 +92,8 @@ MonoBehaviour:
   thrust: 25
   vulnerableTo: Enemy
   explosionPrefab: {fileID: 8569683089645683441, guid: c4fa659515c84c74ba9b7ef2b58e7100, type: 3}
+  UpgradeLevel: 0
+  UpgradeFactor: 0.5
 --- !u!114 &4188294932893690733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,7 +108,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 4188294932893690734}
   photonProjectile: {fileID: 5250708891008281195, guid: cfee1b1e19ba14f47b2acc707ba77307, type: 3}
-  photonSpeed: 5
+  weaponSpeedModifier: 1
+  bulletCountModifier: 0
+--- !u!114 &1343081314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4188294932893690730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d923b8efdd70b1b48b55ecd74e9fe48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _message: MotorSpeed
+  upgradableBehaviour: {fileID: 4188294932893690734}
+--- !u!114 &1343081315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4188294932893690730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d923b8efdd70b1b48b55ecd74e9fe48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _message: Health
+  upgradableBehaviour: {fileID: 4188294932893690732}
 --- !u!1 &4188294933970822836
 GameObject:
   m_ObjectHideFlags: 0

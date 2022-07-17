@@ -549,61 +549,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee2b79d450f0b5445a1496ef07e206e8, type: 3}
---- !u!1 &1343081308 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4188294932893690730, guid: cc2a3a8e6fe3ac840835d00b20b22c84, type: 3}
-  m_PrefabInstance: {fileID: 4188294932849619425}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1343081310 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4188294932893690732, guid: cc2a3a8e6fe3ac840835d00b20b22c84, type: 3}
-  m_PrefabInstance: {fileID: 4188294932849619425}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343081308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f54c20183c03161488447bd82b0140fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1343081312 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4188294932893690734, guid: cc2a3a8e6fe3ac840835d00b20b22c84, type: 3}
-  m_PrefabInstance: {fileID: 4188294932849619425}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343081308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a3bd2777c12fb744b8534c802f74919, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1343081314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343081308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d923b8efdd70b1b48b55ecd74e9fe48a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _message: MotorSpeed
-  upgradableBehaviour: {fileID: 1343081312}
---- !u!114 &1343081315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343081308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d923b8efdd70b1b48b55ecd74e9fe48a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _message: Health
-  upgradableBehaviour: {fileID: 1343081310}
 --- !u!1001 &1366434730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -811,10 +756,6 @@ PrefabInstance:
     - target: {fileID: 4188294932893690730, guid: cc2a3a8e6fe3ac840835d00b20b22c84, type: 3}
       propertyPath: m_Name
       value: PlayerShip
-      objectReference: {fileID: 0}
-    - target: {fileID: 4188294932893690734, guid: cc2a3a8e6fe3ac840835d00b20b22c84, type: 3}
-      propertyPath: UpgradeValue
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4188294932893690737, guid: cc2a3a8e6fe3ac840835d00b20b22c84, type: 3}
       propertyPath: m_RootOrder

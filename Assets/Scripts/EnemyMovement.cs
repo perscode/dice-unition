@@ -13,7 +13,9 @@ public class EnemyMovement : MonoBehaviour
     {
         if (target == null)
         {
-            target = GameObject.FindGameObjectWithTag("Player").transform;
+            GameObject obj = GameObject.FindGameObjectWithTag("Player");
+            if (obj != null)
+                target = obj.transform;
         }
     }
 
