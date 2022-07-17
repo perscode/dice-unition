@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using com.ootii.Messages;
 
-public class DamageHandller : MonoBehaviour
+public class DamageHandller : MonoBehaviour, IUpgradable
 {
-    public int health = 0;
+    public float health = 0;
     public bool isÍmmortal = false;
     public float invulnPeriod = 0;
     float invulnTimer = 0;
@@ -14,6 +14,8 @@ public class DamageHandller : MonoBehaviour
     public string vulnerableTo;
     SpriteRenderer spriteRenderer;
     public GameObject explosionPrefab;
+    public float UpgradeLevel = 0;
+    public float UpgradeFactor = 0.5f;
 
     int correctLayer;
 
@@ -113,5 +115,11 @@ public class DamageHandller : MonoBehaviour
             yield return shortInterval;
             
         }
+    }
+
+    public void SetValue(float value)
+    {
+        health += (value - UpgradeLevel) * UpgradeFactor;
+        UpgradeLevel = value;
     }
 }

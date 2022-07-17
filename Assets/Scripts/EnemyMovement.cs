@@ -6,6 +6,7 @@ public class EnemyMovement : MonoBehaviour
 {
     public float speed = 1.0f;
     public Transform target;
+    public float levelInfluence = 0.35f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (target != null && transform != null)
         {
-            var step = speed * Time.deltaTime;
+            var step = (speed + XpController.level * levelInfluence) * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
         }
     }

@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using com.ootii.Messages;
+using System;
 
 public class XpController : MonoBehaviour
 {
     public RectTransform rectTransform;
     public Image experienceBarImage;
+    public int LevelToWin = 10;
     private int experience;
-    private int level;
+    public static int level;
     private float experienceToNextLevel;
+    public int DebugStartLevel = 0;
 
-    public XpController ()
+    void Awake()
     {
-        level = 0;
+        level = DebugStartLevel;
         experience = 0;
         experienceToNextLevel = 3;
     }
@@ -27,12 +30,30 @@ public class XpController : MonoBehaviour
         SetExperienceBarSize(percentage * 100);
         if (experience >= experienceToNextLevel)
         {
-            level++;
-            experience = 0;
-            experienceToNextLevel *= 1.2f;
-            MessageDispatcher.SendMessage(Msg.LevelUp);
-            SetExperienceBarSize(0f);
+            DoLevelUp();
         }
+    }
+
+    public void DoLevelUp()
+    {
+        level++;
+        experience = 0;
+        experienceToNextLevel *= 1.2f;
+        if (level < LevelToWin)
+        {
+            MessageDispatcher.SendMessage(Msg.LevelUp);
+        }
+        else
+        {
+            MessageDispatcher.SendMessage(Msg.PlayerWon);
+        }
+        SetExperienceBarSize(0f);
+    }
+
+    internal void SetLastLevel()
+    {
+        level = LevelToWin - 2;
+        DoLevelUp();
     }
 
     private void SetExperienceBarSize(float experienceNormalized)
