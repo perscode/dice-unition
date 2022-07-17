@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2865475711031983348}
   - component: {fileID: 5577618930106815942}
   - component: {fileID: 8660780823930396036}
+  - component: {fileID: 246912024}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -57,3 +58,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 0}
+--- !u!114 &246912024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2865475711031983355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b99110424897ab46bcfacd388bad0a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rectTransform: {fileID: 0}
+  experienceBarImage: {fileID: 0}

@@ -37,7 +37,7 @@ public class XpController : MonoBehaviour
 
     private void SetExperienceBarSize(float experienceNormalized)
     {
-        rectTransform.sizeDelta = new Vector2((float)(experienceNormalized * 4.5), 0);
+        rectTransform.sizeDelta = new Vector2((float)(experienceNormalized * 10), 0);
     }
 
     private void OnGainXp(IMessage rMessage)
