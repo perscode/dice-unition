@@ -10,7 +10,7 @@ public class XpController : MonoBehaviour
     public Image experienceBarImage;
     private int experience;
     private int level;
-    private int experienceToNextLevel;
+    private float experienceToNextLevel;
 
     public XpController ()
     {
@@ -28,8 +28,8 @@ public class XpController : MonoBehaviour
         if (experience >= experienceToNextLevel)
         {
             level++;
-            experience -= experienceToNextLevel;
-            experienceToNextLevel *= 2;
+            experience = 0;
+            experienceToNextLevel *= 1.2f;
             MessageDispatcher.SendMessage(Msg.LevelUp);
             SetExperienceBarSize(0f);
         }
