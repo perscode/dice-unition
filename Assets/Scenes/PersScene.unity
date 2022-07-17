@@ -757,6 +757,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
+    - target: {fileID: 4188294932893690733, guid: cc2a3a8e6fe3ac840835d00b20b22c84, type: 3}
+      propertyPath: bulletCountModifier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4188294932893690733, guid: cc2a3a8e6fe3ac840835d00b20b22c84, type: 3}
+      propertyPath: weaponSpeedModifier
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4188294932893690737, guid: cc2a3a8e6fe3ac840835d00b20b22c84, type: 3}
       propertyPath: m_RootOrder
       value: 6
