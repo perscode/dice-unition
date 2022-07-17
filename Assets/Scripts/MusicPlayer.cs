@@ -94,7 +94,7 @@ public class MusicPlayer : SingletonBase<MusicPlayer>
         //MessageDispatcher.RemoveListener(Msg.PlayerLost, PlayMenuMusic);
         MessageDispatcher.RemoveListener(Msg.PlayerLost, PlayLostSound);
         MessageDispatcher.RemoveListener(Msg.LevelStarted, OnLevelStarted);
-        MessageDispatcher.AddListener(Msg.LevelUp, PlayWinSound);
+        MessageDispatcher.RemoveListener(Msg.LevelUp, PlayWinSound);
         //MessageDispatcher.RemoveListener(Msg.PlayerWon, PlayMenuMusic);
         MessageDispatcher.RemoveListener(Msg.PlayerWon, PlayWinSound);
         MessageDispatcher.RemoveListener(Msg.StartMenuMusic, PlayMenuMusic);

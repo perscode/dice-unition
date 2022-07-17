@@ -138,11 +138,14 @@ public class AudioSourceController
 
     IEnumerator WaitForClipToEndCo(AudioSource source, Action actionOnEnd)
     {
-        while (source.isPlaying == true)
-        {
-            yield return 0;
-        }
+        if (source != null)
+        { 
+            while (source.isPlaying == true)
+            {
+                yield return 0;
+            }
 
-        actionOnEnd();
+            actionOnEnd();
+        }
     }
 }
