@@ -5,6 +5,12 @@ using com.ootii.Messages;
 
 public class DebugFunctions : MonoBehaviour
 {
+    XpController _xpController;
+    private void Awake()
+    {
+        _xpController = Object.FindObjectOfType<XpController>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -18,7 +24,14 @@ public class DebugFunctions : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            MessageDispatcher.SendMessage(Msg.LevelUp);
+            
+            if (_xpController != null) _xpController.DoLevelUp();
+            //MessageDispatcher.SendMessage(Msg.LevelUp);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+
+            if (_xpController != null) _xpController.SetLastLevel();
         }
     }
 }

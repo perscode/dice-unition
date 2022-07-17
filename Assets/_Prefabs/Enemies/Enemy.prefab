@@ -216,6 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   target: {fileID: 0}
+  levelInfluence: 0.35
 --- !u!114 &3761382369446018058
 MonoBehaviour:
   m_ObjectHideFlags: 0

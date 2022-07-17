@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 0}
+  maxEnemyCount: 250
 --- !u!114 &246912024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,3 +73,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 0}
   experienceBarImage: {fileID: 0}
+  LevelToWin: 10
+  DebugStartLevel: 0
