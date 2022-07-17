@@ -43,3 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: UpgradeLayer
+    uniqueID: 2525367455
+    locked: 0

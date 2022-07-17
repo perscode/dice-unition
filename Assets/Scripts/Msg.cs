@@ -6,6 +6,7 @@ public static class Msg
         LevelUp = "LevelUp",
         RestartLevel = "RestartLevel",
         LevelStarted = "LevelStarted",
-        StartMenuMusic = "StartMenuMusic";
+        StartMenuMusic = "StartMenuMusic",
+        PlaySound = "PlaySound";
 }
 
