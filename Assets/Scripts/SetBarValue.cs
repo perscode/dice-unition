@@ -12,7 +12,7 @@ public class SetBarValue : MonoBehaviour
     {
         Rect temp = RectTransform.rect;
         //temp.width = 225;
-        RectTransform.sizeDelta = new Vector2 (45, 0);
+        // RectTransform.sizeDelta = new Vector2 (45, 0);
     }
 
     // Update is called once per frame
